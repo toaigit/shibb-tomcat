@@ -1,0 +1,15 @@
+version: '3.8'
+
+networks:
+  default:
+    external:
+      name: myappNET
+
+services:
+
+  mytomcat:
+        image: tomcat
+        container_name: tomcat
+        restart: always
+        expose:
+          - "8009"

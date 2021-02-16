@@ -1,0 +1,22 @@
+version: '3.8'
+
+networks:
+  default:
+    external:
+      name: myappNET
+
+services:
+
+  shibb:
+        image: shibbjk
+        container_name: shibbjk
+        restart: always
+        ports:
+                - "80:80"
+                - "443:443"
+        volumes: 
+          - /home/toaivo/data/shibbjk/html:/var/www/html
+          - /home/toaivo/data/shibbjk/log/apache2:/var/log/apache2
+          - /home/toaivo/data/shibbjk/log/shibboleth:/var/log/shibboleth
+          - /home/toaivo/data/shibbjk/certs:/etc/apache2/certs
+          - /home/toaivo/data/shibbjk/cgi-bin:/etc/apache2/cgi-bin

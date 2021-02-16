@@ -1,0 +1,6 @@
+cd shibb-jk
+Read README.toai to build shibb-jk image
+cd tomcat
+Read README.toai to build tomcat image
+Run startup to start both containers.
+Test https://sitename or https://sitename/sample/
